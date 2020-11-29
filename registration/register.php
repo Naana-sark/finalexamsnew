@@ -43,19 +43,19 @@
     <!-- container for form and header for form -->
 <div class="container">
      <!--Sign Up form begins  -->
-<form method="post" action="register.php">
+<form method="post" action="register.php"id="_form">
   	<?php include('errors.php'); ?>
   	<div class="input-group">
   	  <label>Username: </label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
+  	  <input type="text" id="username" name="username" value="<?php echo $username; ?>">
   	</div>
   	<div class="input-group">
   	  <label>Email: </label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	  <input type="email" id="email" name="email" value="<?php echo $email; ?>">
   	</div>
   	<div class="input-group">
   	  <label>Password: </label>
-  	  <input type="password" name="password_1">
+  	  <input type="password" id="password" name="password_1">
   	</div>
   	<div class="input-group">
   	  <label>Confirm password: </label>

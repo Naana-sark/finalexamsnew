@@ -17,8 +17,19 @@ if (isset($_POST['reg_user'])) {
   $password_1 = mysqli_real_escape_string($conn, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($conn, $_POST['password_2']);
 
+  $name_format = "/^[a-zA-Z].*[\s\.]*$/";
+  $email_format ="/^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*(\.[a-zA-Z]{2,})$/i";
+  $password_format = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,32}$/";
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
+
+  if(!preg_match($name_format, $username)){ array_push($errors, "Enter valid username"); }
+  if(!preg_match($email_format, $email)){ array_push($errors, "Enter a valid email"); }
+  if(!preg_match($password_format, $password_1)){ array_push($errors, "Password should be a minimum 
+    of 8 characters and a maximum of 32, at least one uppercase letter, one lowercase letter, one number
+     and one special character:"); }
+  
+
   if (empty($username)) { array_push($errors, "Username is required"); }
   if (empty($email)) { array_push($errors, "Email is required"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
