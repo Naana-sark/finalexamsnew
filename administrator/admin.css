@@ -1,0 +1,204 @@
+
+
+  *{
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+}
+/* style for the text and password input */
+input[type="text"], input[type="password"]{
+    width: relative;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* style for the button */
+button{
+    background-color: grey;
+    color:white;
+    padding:14px 20px;
+    margin:8px 0;
+    border:none;
+    cursor: pointer;
+    width:relative;
+
+}
+button:hover{
+    opacity:0.8;
+}
+/* style for the container for the avatar */
+.imgcontainer{
+  text-align: center;
+  margin: 5px 0 8px 0;
+}
+/* style for the avatar*/
+img.avatar{
+  width: 30%;
+  border-radius: 30%;
+    }
+
+    /* style for label and input for form */
+.input-group{
+    padding: 16px;
+    text-align:center;
+    
+}
+
+/* style for the container for the form and header */
+.container{
+    text-align:center;
+    border: none;
+    /* border-style: solid; */
+    margin: auto;
+    width:50%;
+    padding: 80px;
+    background: url('../Images/juan-davila-P8PlK2nGwqA-unsplash.jpg');
+}
+
+/* style for the container for the entire body content */
+.con{
+    background: url('../Images/juan-davila-P8PlK2nGwqA-unsplash.jpg');
+    width: 100%;
+    margin: 0;
+    height:auto;
+    min-height: 100%;
+    bottom: 0;
+    line-height: 100%;
+    /* position: relative;
+    right: 0;
+    left: 0; */
+}
+
+/* style for the body */
+body{
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+/* Style the sidebar - fixed full height */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
+  
+  /* Style sidebar links */
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+/* Add media queries for small screens (when the height of the screen is less than 1200px, add a smaller padding and font-size) */
+@media screen and (max-height: 1200px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }  
+  .topnav {
+    background-color: #0165fc;
+    overflow: hidden;
+    width:100%;
+    
+  }
+  /* move these links to the right */
+  .topnavright {
+   float: right;
+    }
+  /* Style the name mystery law */
+  .topnavcenter {
+      text-align: center;
+      color: black;
+      font-size: xx-large;
+      
+       }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .active {
+    background-color: #87cded;
+    color: white;
+  }
+  /* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+  }
+  
+ 
+ 
+  
+ 
+  
+  /* Add a dark background on topnav links  on hover */
+  .topnav a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  
+  /* When the screen is less than 1200 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+  @media screen and (max-width: 1200px) {
+    .topnav a:not(:first-child){
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 1200px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive  {float: none;}
+    .topnav.responsive  {position: relative;}
+    .topnav.responsive  {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  } 
+  .main {
+   
+    position: relative;
+    min-height: 100vh;
+    margin-left: 250px; /* Same as the width of the sidenav */
+    padding-top: 16px;
+  }

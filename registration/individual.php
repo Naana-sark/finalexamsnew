@@ -47,6 +47,7 @@ function myFunction() {
   <!-- The sidebar -->
 <div class="sidebar">
   <br><br>
+  <a href="index.php"><i class="fa fa-fw fa-home" aria-hidden="true"></i> Home</a><br><br>
   <a href="individual.php"><i class="fa fa-fw fa-user" aria-hidden="true"></i> Individuals</a><br><br>
   <a href="lawyer.php"><i class="fa fa-fw fa-user" aria-hidden="true"></i> Lawyers</a><br><br>
   <a href="judge.php"><i class="fa fa-fw fa-user" aria-hidden="true"></i> Judges</a><br><br>
@@ -72,7 +73,7 @@ echo "<br>";
 echo "<br>";
 
 //selecting all from the individual table and displaying in a table
-$sql = "SELECT * FROM individuals";
+$sql = "SELECT individ_id,fname,lname,dob,gender,crimecommitted,case_id FROM individuals";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
