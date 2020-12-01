@@ -1,4 +1,5 @@
 <?php 
+include "../registration/database.php";
 //start session
   session_start(); 
 
@@ -6,7 +7,7 @@
   	$_SESSION['msg'] = "You must log in first";
   	header('location: login.php');
   }
-
+ 
 
   ?>
 <!DOCTYPE html>
@@ -59,12 +60,13 @@ function myFunction() {
 </div>
 
 
-<div class="main" style="text-align:center;">
+<div class="main">
 
   
     <div class="col-sm-9">
       <div class="well">
-     	<!-- notification message -->
+        <h4>Dashboard</h4>
+       	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>
       <div class="error success" >
       	<h3>
@@ -83,13 +85,20 @@ function myFunction() {
        
        
     <?php endif ?>
-
       </div>
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
             <h4>Users</h4>
-            <p>1 Million</p> 
+            <!-- calculate the total number of users -->
+            <p>
+              <?php  $result1=mysqli_query($conn,"SELECT count(*) as total from lawworker");
+                $data=mysqli_fetch_assoc($result1);
+                echo "<strong> Total number of users are : </strong> ";
+                echo  $data['total'];
+                echo "<br>";
+                echo "<br>"?>
+</p> 
           </div>
         </div>
         <div class="col-sm-3">
