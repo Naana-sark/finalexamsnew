@@ -70,13 +70,13 @@ function myFunction() {
                 <div class="col-md-12">
                     <div class="page-header clearfix">
                         <h2 class="pull-left">Individuals Details</h2>
-                        <a href="individualform.php" class="btn btn-info pull-right" target="_blank">Add New Individual</a>
+                        <a href="individualForm.php" class="btn btn-info pull-right" target="_blank">Add New Individual</a>
                     </div>
                     <?php
 
                     // including database connection 
                    include '../registration/database.php';
-                   
+
                 //    selecting specific rows from the individual table and displaying in a table
                 //  allowing the administrator to add, read, edit and delete data
                     $sql = "SELECT individ_id,fname,lname,dob,gender,crimecommitted,case_id FROM individuals";
